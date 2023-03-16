@@ -1,0 +1,27 @@
+@mixin page-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 150px;
+}
+
+@mixin application-button {
+  background: none;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 8px 1rem;
+  color: blue;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background-color: blue;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}

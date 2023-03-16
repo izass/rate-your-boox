@@ -1,9 +1,15 @@
-<h1>Pages#home</h1>
-
-<% if current_user %>
-<p>Logged as <%= current_user.email %></p>
-<%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Sign in', new_user_session_path %>
-<% end %>
+<%= stylesheet_link_tag 'pages/home', media: 'all' %>
+<div class='home'>
+  <h1 class='home__title'>Home</h1>
+  <% if current_user %>
+    <div class='home__logged'>
+      <p>Welcome back, <%= current_user.email %></p>
+      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+    </div>
+  <% else %>
+    <div class='home__unlogged'>
+      <%= button_to 'Sign up', new_user_registration_path, method: :get %>
+      <%= button_to 'Sign in', new_user_session_path, method: :get %>
+    </div>
+  <% end %>
+</div>
