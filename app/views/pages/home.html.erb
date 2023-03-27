@@ -3,7 +3,7 @@
   <h1 class='home__title'>Home</h1>
   <% if current_user %>
     <div class='home__logged'>
-      <p>Welcome back, <%= current_user.email %></p>
+      <p>Welcome back, <%= current_user.username %></p>
       <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
     </div>
   <% else %>
