@@ -1,0 +1,8 @@
+<div class='home__logged'>
+  <h2 class='home__title'><%= current_user.username %></h2>
+  <%= button_to 'Sign out', destroy_user_session_path, method: :delete, form_class: 'home__form-button' %>
+  <div class='home__logged-actions'>
+    <%= link_to 'Create new book', new_book_path %>
+    <%= link_to 'List all books', books_path %>
+  </div>
+</div>

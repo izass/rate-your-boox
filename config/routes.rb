@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'authors/index'
   devise_for :users
   root 'pages#home'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # get '/books', to: 'books#index'
+  resources :books
+  resources :authors
 end

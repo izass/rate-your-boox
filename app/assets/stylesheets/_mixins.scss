@@ -1,7 +1,4 @@
 @mixin page-layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 500px;
   margin: auto;
   border: 1px solid blue;

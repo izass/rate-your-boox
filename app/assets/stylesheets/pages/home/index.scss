@@ -10,8 +10,14 @@
     margin-top: 1rem;
   }
 
+  &__form-button {
+    display: flex;
+    align-items: center;
+  }
+
   #{&} &__logged {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 
     button {
       width: -webkit-fill-available;
